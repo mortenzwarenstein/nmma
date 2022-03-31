@@ -1,0 +1,15 @@
+@mixin nav-item($withUnderline: true) {
+  color: $black;
+  font-weight: normal;
+  transition: ease-out .15s;
+  transition-property: text-decoration, color;
+  text-decoration: underline solid transparent;
+  text-underline-position: under;
+  cursor: pointer;
+  &:hover {
+    color: $lighten-black;
+    @if $withUnderline{
+        text-decoration: underline solid $lighten-black;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "theme-variables";
+@import "mixins";
+
+@import "partials/fonts";
+@import "partials/containers";
+@import "partials/navbar";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+

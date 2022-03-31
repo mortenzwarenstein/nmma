@@ -1,0 +1,22 @@
+@import "theme-variables";
+@import "mixins";
+
+@import "partials/message";
+
+.jumbotron {
+  background-color: $secondary-accent-light;
+  &__container {
+    display: flex;
+    padding-bottom: 3rem;
+  }
+  &__part {
+    flex: 1;
+  }
+  &__img {
+    margin-right: -$gap;
+  }
+}
+
+
+
+

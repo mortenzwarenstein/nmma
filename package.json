@@ -1,0 +1,21 @@
+{
+  "name": "nmma",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "scripts": {
+    "watch": "eleventy --serve",
+    "watch:scss": "npx sass scss:_site/css --watch"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "sass": "^1.49.9"
+  }
+}

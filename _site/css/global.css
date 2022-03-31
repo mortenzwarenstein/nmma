@@ -1,0 +1,92 @@
+/**
+TYPOGRAPHY
+*/
+* {
+  font-family: "Mulish", Helvetica, Arial, sans-serif;
+  color: #2c2c2c;
+}
+
+/**
+UTILITY
+*/
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**
+NAVBAR
+*/
+.header {
+  background-color: #faf5e8;
+  padding: 1.5rem 0;
+}
+
+.top-nav {
+  display: flex;
+}
+.top-nav__item {
+  flex: 1;
+}
+.top-nav__item--right {
+  text-align: right;
+}
+.top-nav__item--center {
+  text-align: center;
+}
+.top-nav__side-menu-item {
+  color: #2c2c2c;
+  font-weight: normal;
+  transition: ease-out 0.15s;
+  transition-property: text-decoration, color;
+  text-decoration: underline solid transparent;
+  text-underline-position: under;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+}
+.top-nav__side-menu-item:hover {
+  color: #525252;
+  text-decoration: underline solid #525252;
+}
+.top-nav__side-menu-item--divider::before {
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 3px;
+  margin-right: 8px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.navbar {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.navbar__item {
+  color: #2c2c2c;
+  font-weight: normal;
+  transition: ease-out 0.15s;
+  transition-property: text-decoration, color;
+  text-decoration: underline solid transparent;
+  text-underline-position: under;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.navbar__item:hover {
+  color: #525252;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=global.css.map */
