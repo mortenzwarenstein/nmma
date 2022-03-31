@@ -5,8 +5,9 @@
   "type": "commonjs",
   "scripts": {
     "watch": "eleventy --serve",
-    "watch:scss": "npx sass scss:_site/css --watch"
-
+    "watch:scss": "build:scss --watch",
+    "build": "npx @11ty/eleventy",
+    "build:scss": "npx sass scss:_site/css"
   },
   "keywords": [],
   "author": "",
