@@ -1,0 +1,24 @@
+.btn {
+  border: 1px solid $black;
+  padding: .7rem 2rem .71rem;
+  background: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: .15s ease-out;
+  cursor: pointer;
+  &__text {
+    transition: inherit;
+    color: inherit;
+    display: inline-block;
+    margin-right: .3rem;
+  }
+  &__icon {
+    transition: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  &:hover {
+    color: white;
+    background-color: $black;
+  }
+}

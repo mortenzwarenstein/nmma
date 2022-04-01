@@ -5,17 +5,16 @@
   "type": "commonjs",
   "scripts": {
     "watch": "eleventy --serve",
-    "watch:scss": "build:scss --watch",
+    "watch:scss": "npx sass scss:_site/css --watch",
     "build": "npx @11ty/eleventy",
     "build:scss": "npx sass scss:_site/css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^0.26.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "contentful": "^9.1.18",
     "@11ty/eleventy": "^1.0.0",
     "sass": "^1.49.9"
   }

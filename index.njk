@@ -5,13 +5,27 @@ css: index
 {% include '_includes/partials/message.njk' %}
 <div class="jumbotron">
     <div class="jumbotron__container container">
-        <div class="jumbotron__part">
-            <h1>
-                {{ home.jumbotron.title }}
-            </h1>
+        <div class="jumbotron__part jumbotron__part--text">
+            <div class="jumbotron__text-container">
+                <h1 class="jumbotron__title">
+                    {{ home.title }}
+                </h1>
+                <h2 class="jumbotron__subtitle">
+                    {{ home.subtitle }}
+                </h2>
+            </div>
+            <div class="jumbotron__button-container">
+                <button class="btn">
+                    <span class="btn__text">
+                        {{ home.buttonText }}
+                    </span>
+                    <i class="las la-chevron-right btn__icon"></i>
+                </button>
+            </div>
         </div>
         <div class="jumbotron__part">
-            <img src="{{ home.jumbotron.img.sourceUrl | url }}" alt="{{ home.jumbotron.img.altText }}" class="jumbotron__img">
+            <img src="{{ home.jumbotronImage.fields.file.url | url }}" alt="{{ home.jumbotronImage.fields.title }}" class="jumbotron__img">
         </div>
     </div>
 </div>
+

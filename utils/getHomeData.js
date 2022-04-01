@@ -1,48 +1,19 @@
-const axios = require("axios")
+const contentful = require("contentful");
 
-class Home {
-    constructor() {
-        this.data = {
-            message: "",
-            jumbotron: {}
-        }
-    }
+async function getHomeData(){
+    var client = contentful.createClient({
+        space: 'agwitairrubm',
+        accessToken: 'Va3-z6hRa1GDe-EWUZ9gPOvbbvU3vdQ-8VEu1a8L18Y',
+    });
 
-    async getData() {
-        const query = `query getHomeData {
-          messages(last: 1) {
-            nodes {
-              content(format: RENDERED)
-            }
-          }
-          pageBy(pageId: 18) {
-            title(format: RENDERED)
-            featuredImage {
-              node {
-                altText
-                sourceUrl
-              }
-            }
-          }
-        }`;
-        const res =  await axios.post("http://localhost:8080/index.php?graphql", {
-            query
-        });
-        let wpData = res.data.data;
-        console.log(wpData.pageBy.featuredImage)
-        this.message = (wpData.messages?.nodes.map(e => e)[0]?.content);
-        this.jumbotron = {
-            title: wpData.pageBy?.title,
-            img: wpData.pageBy?.featuredImage?.node
-        };
+    let res = await client.getEntries({
+        limit: 200,
+        order: 'sys.updatedAt',
+        content_type: 'homepage',
+    })
 
-        return {
-            message: this.message,
-            jumbotron: this.jumbotron
-        }
-    }
+    console.log(res.items[0].fields.jumbotronImage);
+    return res.items[0].fields;
 }
 
-
-
-module.exports = Home
+module.exports = getHomeData
